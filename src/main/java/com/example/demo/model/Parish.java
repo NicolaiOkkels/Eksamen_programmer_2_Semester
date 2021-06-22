@@ -42,13 +42,16 @@ public class Parish {
         this.shutdownStartDate = shutdownStartDate;
     }
 
-    public Parish(Long id, Long parishCode, String name, double infectionLevel, Date shutdownStartDate) {
+    public Parish(Long id, Long parishCode, String name, Municipality municipality, double infectionLevel, Date shutdownStartDate) {
         this.id = id;
         this.parishCode = parishCode;
+        this.municipality = municipality;
         this.name = name;
         this.infectionLevel = infectionLevel;
         this.shutdownStartDate = shutdownStartDate;
     }
+
+
 
     public Long getId() {
         return id;

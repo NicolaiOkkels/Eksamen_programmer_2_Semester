@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.Municipality;
 import com.example.demo.model.Parish;
 import com.example.demo.service.ParishService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ public class ParishRestController {
 
     @PutMapping("/sogne/{id}")
     public Parish parishUpdate(@PathVariable("id") long id, @RequestBody Parish parish){
-        return new Parish(id, parish.getParishCode(), parish.getName(), parish.getInfectionLevel(),parish.getShutdownStartDate());
+        return new Parish(id, parish.getParishCode(), parish.getName(), parish.getMunicipality(), parish.getInfectionLevel(),parish.getShutdownStartDate());
     }
 
     @PostMapping("/sogne")
